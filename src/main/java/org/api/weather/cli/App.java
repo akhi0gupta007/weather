@@ -8,7 +8,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 /**
  * Utility to find coolest hour tommorow in US by Zip 
- * Test US Zip : 94040, 11368
+ * Test data (US Zip)  : 85001, 94040, 11368
  *
  */
 public class App {

@@ -5,6 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * Utility class for storing utility methods
+ * @author akhilesh
+ *
+ */
 public class Utils {
 
 	/**
@@ -26,15 +31,12 @@ public class Utils {
 		return date;
 	}
 
-	public static Double parseDouble(String data) {
-		try {
-			return Double.parseDouble(data);
-		} catch (NumberFormatException ex) {
-			return 0.0;
-		}
 
-	}
-
+	/**
+	 * Retrives the date object of 1 day later than date passed as argument
+	 * @param date is the date
+	 * @return date object after adding 1 day
+	 */
 	public static Date getTomorrowDate(Date date) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
@@ -45,6 +47,10 @@ public class Utils {
 		return cal.getTime();
 	}
 
+	/** Gets the today's date object
+	 * @param date
+	 * @return
+	 */
 	public static Date getTodayDate(Date date) {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(date);
@@ -54,13 +60,13 @@ public class Utils {
 		return cal.getTime();
 	}
 
-	public static int getHour(Date date) {
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(date);
-		return cal.get(Calendar.HOUR_OF_DAY);
+	/**
+	 * Gets the current hour in AM/PM format for date object passed as argument
+	 * @param date is date object
+	 * @return the AM/PM time 
+	 */
+	public static String getHour(Date date) {
+		return new SimpleDateFormat("hh:mm a").format(date);		
 	}
 
-	public static void main(String[] args) {
-		System.out.println(getTodayDate(new Date()));
-	}
 }

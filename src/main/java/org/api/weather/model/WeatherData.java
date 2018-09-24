@@ -3,6 +3,11 @@ package org.api.weather.model;
 import java.util.Date;
 
 
+/**
+ * Data model to store the weather data (Minimum and Maximum Temp.) of a particular city by timestamp
+ * @author akhilesh
+ *
+ */
 public class WeatherData {
 
 	private Date timestamp;

@@ -18,11 +18,17 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 
+/**
+ * This service uses openweathermap API to determine the coolest hour for tommorow. 
+ * @author akhilesh
+ *
+ */
 @Service
 public class OpenWeatherApi implements WeatherService {
 
 	private String dateRecorded;
 
+	@Override
 	public String findCoolestDayByZip(String zip) {
 
 		String urlText = String.format(
